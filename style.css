@@ -1,126 +1,196 @@
-.hero-bg {
-    position: relative;
-    background: url('img/lipe.jpg') center center no-repeat;
-    background-size: cover;
-    min-height: 100vh;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-left: 60px;
-    padding-top: 120px;
-    padding-right: 20px; /* para evitar que o conteúdo encoste na borda direita */
-    box-sizing: border-box;
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(20, 24, 28, 0.7);
-    z-index: 1;
-  }
-  
-  .hero-content {
-    position: relative;
-    z-index: 2;
-  }
-  
-  .hero-title {
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-size: 3rem;
-    font-weight: 700;
-    letter-spacing: 2px;
+/* Removendo estilos inline do HTML para o CSS */
+.hero-title {
     margin-bottom: 0.01em;
     margin-top: 0;
-  }
-  
-  .hero-subtitle {
-    font-size: 1.2rem;
-    letter-spacing: 2px;
-    color: #b0b0b0;
-    margin-bottom: 30px;
-  }
-  
-  .hero-buttons .btn {
-    margin-right: 15px;
-    border-radius: 25px;
-    padding: 8px 32px;
-    font-weight: 600;
-  }
-  
-  .hero-buttons .btn-outline-light {
-    border: 2px solid #fff;
-  }
-  
-  .social-icons {
-    position: absolute;
-    left: 60px;
-    bottom: 40px;
-    z-index: 2;
-  }
-  
-  .social-icons a {
+}
+
+/* Hero Section */
+.hero-bg {
+    position: relative;
+    min-height: 100vh;
     color: #fff;
-    margin-right: 18px;
-    font-size: 1.3rem;
+    /* Usar flexbox para posicionamento */
+    display: flex;
+    flex-direction: column; /* Conteúdo em coluna por padrão (mobile first) */
+    justify-content: center; /* Centraliza verticalmente o conteúdo */
+    align-items: flex-start; /* Alinha o conteúdo à esquerda */
+    padding: 20px; /* Padding geral para telas pequenas */
+    box-sizing: border-box;
+    overflow: hidden; /* Garante que a imagem de fundo não saia dos limites */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Pseudo-elemento para a imagem de fundo e overlay */
+.hero-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('img/lipe.jpg') center center no-repeat;
+    background-size: cover;
+    z-index: 1; /* Abaixo do conteúdo */
+    /* Você pode ajustar a opacidade aqui para o overlay */
+    opacity: 0.7; /* Para simular o overlay preto */
+}
+
+/* O conteúdo real da hero section */
+.hero-content {
+    position: relative;
+    z-index: 2; /* Acima da imagem de fundo */
+    max-width: 90%; /* Limita a largura para mobile */
+    margin-top: 60px; /* Espaço para a navbar em mobile */
+}
+
+.hero-title {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 2.5rem; /* Ajuste para mobile */
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.1; /* Ajusta a altura da linha */
+    margin-bottom: 0; /* Remover margin entre os titles */
+}
+
+.hero-title:nth-child(2) { /* Ajuste para o segundo 'FERNANDES' */
+    margin-top: 0;
+}
+
+
+.hero-subtitle {
+    font-size: 1rem; /* Ajuste para mobile */
+    letter-spacing: 1px;
+    color: #b0b0b0;
+    margin-bottom: 1.5rem; /* Usar rem para espaçamento */
+}
+
+.hero-buttons {
+    display: flex; /* Para os botões ficarem lado a lado */
+    flex-wrap: wrap; /* Permite que os botões quebrem a linha */
+    gap: 10px; /* Espaçamento entre os botões */
+    margin-bottom: 1.5rem;
+}
+
+.hero-buttons .btn {
+    border-radius: 25px;
+    padding: 8px 24px; /* Ajuste para mobile */
+    font-weight: 600;
+    font-size: 0.9rem; /* Ajuste para mobile */
+}
+
+.hero-buttons .btn-outline-light {
+    border: 2px solid #fff;
+}
+
+.social-icons {
+    position: relative; /* Posicionamento relativo dentro do flexbox */
+    z-index: 2;
+    margin-top: auto; /* Empurra para o final do flex container */
+    padding-bottom: 20px; /* Espaço para o rodapé em mobile */
+    align-self: flex-start; /* Alinha os ícones à esquerda */
+}
+
+.social-icons a {
+    color: #fff;
+    margin-right: 15px;
+    font-size: 1.2rem; /* Ajuste para mobile */
     transition: color 0.2s;
-  }
-  
-  .social-icons a:hover {
+}
+
+.social-icons a:hover {
     color: #00bcd4;
-  }
-  
-  /* Responsividade mantendo layout e posições */
-  
-  @media (max-width: 992px) {
-    .hero-bg {
-      padding-left: 40px;
-      padding-top: 100px;
-    }
-    .social-icons {
-      left: 40px;
-      bottom: 30px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .hero-bg {
-      padding-left: 30px;
-      padding-top: 80px;
-    }
+}
+
+/* Media Queries para Tablets e Desktops */
+
+@media (min-width: 576px) { /* Pequenas telas, como alguns celulares maiores e tablets */
     .hero-title {
-      font-size: 2.5rem;
+        font-size: 3rem;
     }
     .hero-subtitle {
-      font-size: 1rem;
+        font-size: 1.1rem;
     }
     .hero-buttons .btn {
-      padding: 6px 24px;
-      font-size: 0.9rem;
+        padding: 10px 28px;
+        font-size: 1rem;
     }
-    .social-icons {
-      left: 30px;
-      bottom: 25px;
+    .social-icons a {
+        font-size: 1.4rem;
     }
-  }
-  
-  @media (max-width: 480px) {
+}
+
+@media (min-width: 768px) { /* Tablets e telas médias */
     .hero-bg {
-      padding-left: 20px;
-      padding-top: 60px;
+        padding: 40px; /* Mais padding */
+        justify-content: center;
+        align-items: flex-start; /* Alinha à esquerda no desktop */
+        padding-left: 60px; /* Retorna o padding original para desktop */
+    }
+    .hero-content {
+        max-width: 50%; /* Limita a largura do conteúdo para a imagem aparecer ao lado */
+        margin-top: 0; /* Remove o margin-top extra do mobile */
     }
     .hero-title {
-      font-size: 2rem;
+        font-size: 3.5rem;
     }
     .hero-subtitle {
-      font-size: 0.9rem;
-    }
-    .hero-buttons .btn {
-      padding: 5px 20px;
-      font-size: 0.85rem;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
     }
     .social-icons {
-      left: 20px;
-      bottom: 20px;
+        position: absolute; /* Retorna ao posicionamento absoluto para desktop */
+        left: 60px;
+        bottom: 40px;
+        margin-top: 0;
     }
-  }
+}
+
+@media (min-width: 992px) { /* Desktops */
+    .hero-bg {
+        padding-left: 100px; /* Mais padding para desktop */
+    }
+    .hero-title {
+        font-size: 4rem; /* Tamanho maior para desktop */
+    }
+    .hero-subtitle {
+        font-size: 1.4rem;
+    }
+    .social-icons {
+        left: 100px;
+    }
+}
+
+@media (min-width: 1200px) { /* Telas grandes */
+    .hero-title {
+        font-size: 5rem;
+    }
+    .hero-subtitle {
+        font-size: 1.6rem;
+    }
+}
+
+/* Estilos para a Navbar para garantir que o número de telefone apareça no desktop e o menu hamburguer no mobile */
+.navbar-text.d-none.d-md-block {
+    display: none !important; /* Esconde por padrão para mobile */
+}
+
+@media (min-width: 768px) {
+    .navbar-text.d-none.d-md-block {
+        display: block !important; /* Mostra no desktop */
+    }
+    .navbar-toggler {
+        display: none; /* Esconde o toggler no desktop */
+    }
+}
+
+/* Ajustes para a navbar em mobile quando o menu está aberto */
+.navbar-collapse {
+    background-color: rgba(20, 24, 28, 0.9); /* Fundo para o menu aberto em mobile */
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.navbar-nav .nav-item {
+    margin-bottom: 5px;
+}
