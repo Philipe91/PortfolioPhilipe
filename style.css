@@ -1,71 +1,65 @@
 /* Removendo estilos inline do HTML para o CSS */
 .hero-title {
-    margin-bottom: 0.01em;
+    margin-bottom: 0.01em; /* Ajuste para espaçamento entre os títulos */
     margin-top: 0;
 }
 
 /* Hero Section */
 .hero-bg {
     position: relative;
-    min-height: 100vh;
+    background: url('img/lipe.jpg') center center no-repeat; /* Imagem de fundo aplicada aqui */
+    background-size: cover;
+    min-height: 100vh; /* Ocupa a altura total da viewport */
     color: #fff;
-    /* Usar flexbox para posicionamento */
-    display: flex;
-    flex-direction: column; /* Conteúdo em coluna por padrão (mobile first) */
-    justify-content: center; /* Centraliza verticalmente o conteúdo */
+    display: flex; /* Habilita Flexbox */
+    flex-direction: column; /* Itens empilhados verticalmente */
+    justify-content: space-between; /* Espaçamento entre os grupos de conteúdo (hero-content e social-icons) */
     align-items: flex-start; /* Alinha o conteúdo à esquerda */
     padding: 20px; /* Padding geral para telas pequenas */
     box-sizing: border-box;
-    overflow: hidden; /* Garante que a imagem de fundo não saia dos limites */
-    text-align: left; /* Alinha o texto à esquerda */
+    overflow: hidden; /* Garante que nada transborde */
+    text-align: left; /* Alinha o texto à esquerda por padrão */
 }
 
-/* Pseudo-elemento para a imagem de fundo e overlay */
-.hero-bg::before {
-    content: '';
+/* O Overlay para escurecer a imagem */
+.overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('img/lipe.jpg') center center no-repeat;
-    background-size: cover;
-    z-index: 1; /* Abaixo do conteúdo */
-    /* Você pode ajustar a opacidade aqui para o overlay */
-    opacity: 0.7; /* Para simular o overlay preto */
+    background: rgba(20, 24, 28, 0.7); /* Cor escura com 70% de opacidade */
+    z-index: 1; /* Fica acima da imagem de fundo, mas abaixo do conteúdo */
 }
 
 /* O conteúdo real da hero section */
 .hero-content {
-    position: relative;
-    z-index: 2; /* Acima da imagem de fundo */
-    max-width: 90%; /* Limita a largura para mobile */
-    margin-top: 60px; /* Espaço para a navbar em mobile */
+    position: relative; /* Importante para z-index */
+    z-index: 2; /* Acima do overlay e da imagem de fundo */
+    width: 100%; /* Ocupa 100% da largura do pai no mobile */
+    padding-top: 80px; /* Espaço para a navbar em mobile (ajuste conforme necessário) */
+    padding-left: 0; /* Remover padding lateral padrão para mobile */
 }
 
 .hero-title {
     font-family: 'Montserrat', Arial, sans-serif;
-    font-size: 2.5rem; /* Ajuste para mobile */
+    font-size: 2.2rem; /* Ajuste para mobile */
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 0.5px; /* Ajuste o espaçamento das letras para mobile */
     line-height: 1.1; /* Ajusta a altura da linha */
-    margin-bottom: 0; /* Remover margin entre os titles */
+    margin-bottom: 0;
 }
-
-.hero-title:nth-child(2) { /* Ajuste para o segundo 'FERNANDES' */
-    margin-top: 0;
-}
-
 
 .hero-subtitle {
-    font-size: 1rem; /* Ajuste para mobile */
-    letter-spacing: 1px;
+    font-size: 0.9rem; /* Ajuste para mobile */
+    letter-spacing: 0.2px; /* Ajuste o espaçamento */
     color: #b0b0b0;
-    margin-bottom: 1.5rem; /* Usar rem para espaçamento */
+    margin-bottom: 1.5rem;
+    max-width: 90%; /* Limita a largura da descrição para mobile */
 }
 
 .hero-buttons {
-    display: flex; /* Para os botões ficarem lado a lado */
+    display: flex;
     flex-wrap: wrap; /* Permite que os botões quebrem a linha */
     gap: 10px; /* Espaçamento entre os botões */
     margin-bottom: 1.5rem;
@@ -73,9 +67,9 @@
 
 .hero-buttons .btn {
     border-radius: 25px;
-    padding: 8px 24px; /* Ajuste para mobile */
+    padding: 8px 24px;
     font-weight: 600;
-    font-size: 0.9rem; /* Ajuste para mobile */
+    font-size: 0.9rem;
 }
 
 .hero-buttons .btn-outline-light {
@@ -83,17 +77,18 @@
 }
 
 .social-icons {
-    position: relative; /* Posicionamento relativo dentro do flexbox */
+    position: relative; /* Relativo ao flex container hero-bg */
     z-index: 2;
     margin-top: auto; /* Empurra para o final do flex container */
     padding-bottom: 20px; /* Espaço para o rodapé em mobile */
     align-self: flex-start; /* Alinha os ícones à esquerda */
+    padding-left: 0; /* Remover padding lateral padrão para mobile */
 }
 
 .social-icons a {
     color: #fff;
     margin-right: 15px;
-    font-size: 1.2rem; /* Ajuste para mobile */
+    font-size: 1.2rem;
     transition: color 0.2s;
 }
 
@@ -101,11 +96,15 @@
     color: #00bcd4;
 }
 
-/* Media Queries para Tablets e Desktops */
+/* Media Queries para responsividade */
 
-@media (min-width: 576px) { /* Pequenas telas, como alguns celulares maiores e tablets */
+/* Ajustes para telas maiores (tablets, a partir de 576px) */
+@media (min-width: 576px) {
+    .hero-content {
+        padding-top: 100px;
+    }
     .hero-title {
-        font-size: 3rem;
+        font-size: 2.8rem;
     }
     .hero-subtitle {
         font-size: 1.1rem;
@@ -114,43 +113,65 @@
         padding: 10px 28px;
         font-size: 1rem;
     }
+    .social-icons {
+        padding-left: 20px;
+    }
     .social-icons a {
         font-size: 1.4rem;
     }
 }
 
-@media (min-width: 768px) { /* Tablets e telas médias */
+/* Ajustes para tablets e desktops (a partir de 768px) */
+@media (min-width: 768px) {
     .hero-bg {
-        padding: 40px; /* Mais padding */
-        justify-content: center;
-        align-items: flex-start; /* Alinha à esquerda no desktop */
-        padding-left: 60px; /* Retorna o padding original para desktop */
+        padding: 40px; /* Mais padding nas laterais para desktop */
+        /* Para desktop, o conteúdo continua alinhado à esquerda, e a imagem preenche o restante */
+        justify-content: center; /* Centraliza o grupo de conteúdo verticalmente */
+        align-items: flex-start; /* Alinha o conteúdo à esquerda */
+        padding-left: 60px; /* Padding específico para o conteúdo começar mais à direita */
     }
     .hero-content {
         max-width: 50%; /* Limita a largura do conteúdo para a imagem aparecer ao lado */
-        margin-top: 0; /* Remove o margin-top extra do mobile */
+        padding-top: 0; /* Remove o padding-top extra do mobile */
     }
     .hero-title {
         font-size: 3.5rem;
+        letter-spacing: 2px;
     }
     .hero-subtitle {
         font-size: 1.2rem;
+        letter-spacing: 1px;
         margin-bottom: 2rem;
+        max-width: none; /* Remove a limitação de largura */
     }
     .social-icons {
         position: absolute; /* Retorna ao posicionamento absoluto para desktop */
-        left: 60px;
+        left: 60px; /* Mesma distância do padding-left do hero-bg */
         bottom: 40px;
-        margin-top: 0;
+        margin-top: 0; /* Remove o auto-margin do flexbox */
+        padding-left: 0; /* Remove padding lateral */
+    }
+
+    /* Estilos da Navbar para Desktop */
+    .navbar-text.d-none.d-md-block {
+        display: block !important; /* Mostra o número de telefone no desktop */
+    }
+    .navbar-toggler {
+        display: none; /* Esconde o botão de hambúrguer no desktop */
+    }
+    .navbar-collapse.collapse {
+        display: flex !important; /* Força a navbar a ser um flex container no desktop */
+        flex-grow: 1; /* Permite que o ul .me-auto empurre o número para a direita */
     }
 }
 
-@media (min-width: 992px) { /* Desktops */
+/* Ajustes para desktops maiores (a partir de 992px) */
+@media (min-width: 992px) {
     .hero-bg {
-        padding-left: 100px; /* Mais padding para desktop */
+        padding-left: 100px;
     }
     .hero-title {
-        font-size: 4rem; /* Tamanho maior para desktop */
+        font-size: 4rem;
     }
     .hero-subtitle {
         font-size: 1.4rem;
@@ -160,7 +181,8 @@
     }
 }
 
-@media (min-width: 1200px) { /* Telas grandes */
+/* Ajustes para telas muito grandes (a partir de 1200px) */
+@media (min-width: 1200px) {
     .hero-title {
         font-size: 5rem;
     }
@@ -169,26 +191,21 @@
     }
 }
 
-/* Estilos para a Navbar para garantir que o número de telefone apareça no desktop e o menu hamburguer no mobile */
-.navbar-text.d-none.d-md-block {
-    display: none !important; /* Esconde por padrão para mobile */
+/* Ajustes para a Navbar em mobile quando o menu está aberto */
+/* Garante que o menu aberto tenha um fundo escuro e não empurre o conteúdo */
+.navbar-collapse:not(.show) { /* Aplica apenas quando não está mostrando (para evitar conflito com .show) */
+    background-color: transparent; /* Por padrão transparente, só muda quando expandido */
 }
 
-@media (min-width: 768px) {
-    .navbar-text.d-none.d-md-block {
-        display: block !important; /* Mostra no desktop */
-    }
-    .navbar-toggler {
-        display: none; /* Esconde o toggler no desktop */
-    }
-}
-
-/* Ajustes para a navbar em mobile quando o menu está aberto */
-.navbar-collapse {
+.navbar-collapse.show { /* Quando o menu está expandido (no mobile) */
     background-color: rgba(20, 24, 28, 0.9); /* Fundo para o menu aberto em mobile */
     padding: 15px;
     border-radius: 5px;
     margin-top: 10px;
+    position: absolute; /* Para não empurrar o conteúdo da hero section */
+    width: 90%; /* Ajusta a largura do menu aberto */
+    left: 5%; /* Centraliza o menu aberto */
+    box-sizing: border-box;
 }
 
 .navbar-nav .nav-item {

@@ -4,37 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Philipe Fernandes</title>
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts: Montserrat + Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <!-- Font Awesome para ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-transparent position-absolute w-100" style="z-index:10;">
         <div class="container-fluid">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
-                <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                <li class="nav-item"><a class="nav-link" href="#resume">Formação</a></li>
-                <li class="nav-item"><a class="nav-link" href="#hobbies">Hobbies</a></li>
-            </ul>
-            <span class="navbar-text text-white d-none d-md-block">
-                <i class="fas fa-phone-alt me-2"></i> (61) 98472-7358
-            </span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#resume">Formação</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#hobbies">Hobbies</a></li>
+                </ul>
+                <span class="navbar-text text-white d-none d-md-block">
+                    <i class="fas fa-phone-alt me-2"></i> (61) 98472-7358
+                </span>
+            </div>
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
     <div class="hero-bg">
-        <div class="overlay"></div>
-        <div class="hero-content">
-            <div class="hero-title" style="margin-bottom:0.01em; margin-top:0;">PHILIPE</div>
-            <div class="hero-title" style="margin-top:0;">FERNANDES</div>
+        <div class="overlay"></div> <div class="hero-content">
+            <div class="hero-title">PHILIPE</div> 
+            <div class="hero-title">FERNANDES</div> 
             <div class="hero-subtitle mb-4">Designer / Video Maker / UI / Músico</div>
             <div class="hero-buttons mb-4">
                 <a href="#about" class="btn btn-outline-light">Sobre</a>
@@ -48,15 +47,10 @@
         </div>
     </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
     <section id="about" class="py-5" style="background: #181c20; color: #fff;">
         <div class="container">
           <div class="row align-items-center" style="min-height: 350px;">
-            <!-- Coluna do texto à esquerda com linha azul -->
             <div class="col-md-7 position-relative">
-              <!-- Linha azul vertical -->
               <div style="position: absolute; left: -20px; top: 0; width: 4px; height: 100%; background: #00bcd4;"></div>
             
               <h2 class="fw-bold mb-4" style="font-size: 2.8rem; letter-spacing: 2px; color: #00bcd4;">Sobre</h2>
@@ -66,7 +60,6 @@ Atualmente, estou expandindo meus horizontes e mergulhando no universo do UI Des
 Além disso, sou baterista e já tive a oportunidade de fazer shows pelo Brasil inteiro, levando energia e ritmo para diferentes públicos e palcos.
               </p>
             </div>
-            <!-- Coluna da foto à direita -->
             <div class="col-md-5 text-center">
               <img src="img/philipe.jpeg" alt="Foto de Philipe" class="img-fluid rounded-circle shadow" style="width: 240px; height: 240px; object-fit: cover; border: 6px solid #00bcd4;">
             </div>
@@ -80,7 +73,6 @@ Além disso, sou baterista e já tive a oportunidade de fazer shows pelo Brasil 
           <div class="row">
             <div class="col-md-10 offset-md-1">
 
-              <!-- Item de Formação 1 -->
               <div class="card bg-dark border-0 shadow mb-4">
                 <div class="card-body">
                   <h5 class="card-title" style="color:#00bcd4;">Análise e desenvolvimento de sistemas</h5>
@@ -91,8 +83,6 @@ Além disso, sou baterista e já tive a oportunidade de fazer shows pelo Brasil 
               </div>
               <h3 class="fw-bold mt-5 mb-4" style="color: #00bcd4;">Certificados</h3>
       
-              <!-- Certificado 2 da Alura (copie e cole para mais certificados) -->
-
               <div class="card bg-dark border-0 shadow mb-3">
                 <div class="card-body d-flex justify-content-between align-items-center">
                   <div>
@@ -192,8 +182,6 @@ Além disso, sou baterista e já tive a oportunidade de fazer shows pelo Brasil 
               </div>
 
 
-
-
 </section>
                 </div>
               </div>
@@ -206,7 +194,6 @@ Além disso, sou baterista e já tive a oportunidade de fazer shows pelo Brasil 
         <div class="container">
           <h2 class="fw-bold mb-5" style="font-size: 2.5rem; letter-spacing: 2px; color: #00bcd4;">Hobbies & Interesses</h2>
           <div class="row g-4 justify-content-center">
-            <!-- Hobby: Música/Bateria -->
             <div class="col-md-6 col-lg-4">
               <div class="card bg-dark border-0 shadow h-100 text-center">
                 <div class="card-body d-flex flex-column align-items-center">
@@ -221,7 +208,6 @@ Além disso, sou baterista e já tive a oportunidade de fazer shows pelo Brasil 
                 </div>
               </div>
             </div>
-            <!-- Hobby: Família -->
             <div class="col-md-6 col-lg-4">
               <div class="card bg-dark border-0 shadow h-100 text-center">
                 <div class="card-body d-flex flex-column align-items-center">
@@ -244,10 +230,8 @@ Além disso, sou baterista e já tive a oportunidade de fazer shows pelo Brasil 
         <div class="container">
           <h2 class="fw-bold mb-5" style="font-size: 2.5rem; letter-spacing: 2px; color: #00bcd4;">Portfolio</h2>
     
-         <!-- Designer -->
-<h3 class="fw-bold mt-4 mb-3" style="color: #00bcd4;">Designer</h3>
+         <h3 class="fw-bold mt-4 mb-3" style="color: #00bcd4;">Designer</h3>
 <div class="row g-4 mb-4">
-  <!-- Arte 1 -->
   <div class="col-md-6 col-lg-4">
     <div class="card bg-dark border-0 shadow h-100">
       <div class="card-body">
@@ -264,8 +248,7 @@ Além disso, sou baterista e já tive a oportunidade de fazer shows pelo Brasil 
   </div>
 
  
-  <!-- Arte 2 -->
-<div class="col-md-6 col-lg-4">
+  <div class="col-md-6 col-lg-4">
   <div class="card bg-dark border-0 shadow h-100">
     <div class="card-body">
       <h5 class="card-title" style="color:#00bcd4;">Arte Digital Toyota Racing</h5>
@@ -275,7 +258,6 @@ Além disso, sou baterista e já tive a oportunidade de fazer shows pelo Brasil 
       </p>
       <img src="img/toyota.jpeg" class="card-img-top mb-3" alt="Arte Digital 2" style="border-radius: 8px;" />
       
-      <!-- Container responsivo para o vídeo -->
       <div class="ratio ratio-16x9" style="border-radius: 8px; overflow: hidden;">
         <iframe 
           src="https://www.youtube.com/embed/RSdENe6A7a0?si=s71iblRerSjvYPMT" 
@@ -289,7 +271,6 @@ Além disso, sou baterista e já tive a oportunidade de fazer shows pelo Brasil 
   </div>
 </div>
     
-          <!-- Video Maker -->
           <h3 class="fw-bold mt-4 mb-3" style="color: #00bcd4;">Video Maker</h3>
           <div class="row g-4 mb-4">
             <div class="col-md-6 col-lg-4">
@@ -310,15 +291,12 @@ Além disso, sou baterista e já tive a oportunidade de fazer shows pelo Brasil 
                 </div>
               </div>
             </div>
-            <!-- Adicione mais cards de vídeo aqui -->
-          </div>
+            </div>
     
-          <!-- UI -->
           <section id="ui" class="py-5" style="background: #181c20; color: #fff;">
             <div class="container">
               <h2 class="fw-bold mb-5" style="font-size: 2.5rem; letter-spacing: 2px; color: #00bcd4;">UI Design</h2>
               <div class="row g-4 mb-4 justify-content-center">
-                <!-- Projeto UI 1 (Card com imagem e texto) -->
                 <div class="col-md-6 col-lg-4">
                   <div class="card bg-dark border-0 shadow h-100">
                     <div class="card-body">
@@ -326,10 +304,7 @@ Além disso, sou baterista e já tive a oportunidade de fazer shows pelo Brasil 
                       <p class="card-text" style="color:#ccc;">
                        Wireframe de um aplicativo de venda de ingressos, focado em usabilidade e experiência do usuário.
                       </p>
-                      <!-- Imagem principal do projeto UI -->
                       <img src="img/figma01.jpg" class="card-img-top mb-3" alt="App Ticket UI" style="border-radius: 8px;">
-                      <!-- Segunda imagem ou detalhe do projeto UI -->
-                    
                       <div class="mt-3 text-center">
                         <a href="https://www.figma.com/design/2C1aZjv354SFRI3snZO7KN/App-Ticket?node-id=0-1&m=dev&t=9Rn24gyrxIRnOtJa-1" target="_blank" class="btn btn-outline-light btn-sm">
                           Ver no Figma
@@ -339,7 +314,6 @@ Além disso, sou baterista e já tive a oportunidade de fazer shows pelo Brasil 
                   </div>
                 </div>
         
-                <!-- Projeto UI 2 (Outro card com imagem e texto) -->
                 <div class="col-md-6 col-lg-4">
                   <div class="card bg-dark border-0 shadow h-100">
                     <div class="card-body">
@@ -357,17 +331,14 @@ Além disso, sou baterista e já tive a oportunidade de fazer shows pelo Brasil 
                     </div>
                   </div>
                 </div>
-                <!-- Adicione mais cards de UI aqui, copiando o bloco acima -->
-              </div>
+                </div>
             </div>
           </section>
     
     
           
-            <!-- Video Maker -->
-<h3 class="fw-bold mt-4 mb-3" style="color: #00bcd4;">Músico</h3>
+            <h3 class="fw-bold mt-4 mb-3" style="color: #00bcd4;">Músico</h3>
 <div class="row g-4 mb-4">
-  <!-- Vídeo 1 -->
   <div class="col-md-6 col-lg-4">
     <div class="card bg-dark border-0 shadow h-100">
       <div class="ratio ratio-16x9">
@@ -388,7 +359,6 @@ Além disso, sou baterista e já tive a oportunidade de fazer shows pelo Brasil 
     </div>
   </div>
 
-  <!-- Vídeo 2 -->
   <div class="col-md-6 col-lg-4">
     <div class="card bg-dark border-0 shadow h-100">
       <div class="ratio ratio-16x9">
@@ -409,7 +379,6 @@ Além disso, sou baterista e já tive a oportunidade de fazer shows pelo Brasil 
     </div>
   </div>
 
-  <!-- Vídeo 3 -->
   <div class="col-md-6 col-lg-4">
     <div class="card bg-dark border-0 shadow h-100">
       <div class="ratio ratio-16x9">
