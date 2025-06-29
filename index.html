@@ -1,147 +1,474 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Philipe Fernandes</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Google Fonts: Montserrat + Poppins -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  <!-- Font Awesome para ícones -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-  <style>
-    body, html {
-      height: 100%;
-      margin: 0;
-      font-family: 'Poppins', Arial, sans-serif;
-      background: #181c20;
-      color: #fff;
-    }
-    .hero-bg {
-      background: url('img/lipe.jpg') top center/cover no-repeat;
-      min-height: 100vh;
-      color: #fff;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 60px 20px 40px 20px;
-      box-sizing: border-box;
-      text-align: center;
-    }
-    .overlay {
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(20, 24, 28, 0.7);
-      z-index: 1;
-    }
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    .hero-title {
-      font-family: 'Montserrat', Arial, sans-serif;
-      font-size: 3rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      margin-bottom: 0.01em;
-      line-height: 1.1;
-    }
-    .hero-subtitle {
-      font-size: 1.2rem;
-      letter-spacing: 2px;
-      color: #b0b0b0;
-      margin-bottom: 30px;
-    }
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-      margin-bottom: 30px;
-    }
-    .hero-buttons .btn {
-      border-radius: 25px;
-      padding: 8px 32px;
-      font-weight: 600;
-      min-width: 120px;
-      flex: 1 1 auto;
-      max-width: 200px;
-    }
-    .hero-buttons .btn-outline-light {
-      border: 2px solid #fff;
-    }
-    .social-icons {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      font-size: 1.8rem;
-    }
-    .social-icons a {
-      color: #fff;
-      transition: color 0.2s;
-    }
-    .social-icons a:hover {
-      color: #00bcd4;
-    }
-    @media (max-width: 768px) {
-      .hero-title {
-        font-size: 2rem;
-      }
-      .hero-subtitle {
-        font-size: 1rem;
-      }
-      .hero-buttons .btn {
-        max-width: 100%;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Philipe Fernandes</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts: Montserrat + Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-transparent position-absolute w-100" style="z-index: 10;">
-    <div class="container-fluid">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
-        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-        <li class="nav-item"><a class="nav-link" href="#resume">Formação</a></li>
-        <li class="nav-item"><a class="nav-link" href="#hobbies">Hobbies</a></li>
-      </ul>
-      <span class="navbar-text text-white d-none d-md-block">
-        <i class="fas fa-phone-alt me-2"></i> (61) 98472-7358
-      </span>
-    </div>
-  </nav>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent position-absolute w-100" style="z-index:10;">
+        <div class="container-fluid">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
+                <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#resume">Formação</a></li>
+                <li class="nav-item"><a class="nav-link" href="#hobbies">Hobbies</a></li>
+            </ul>
+            <span class="navbar-text text-white d-none d-md-block">
+                <i class="fas fa-phone-alt me-2"></i> (61) 98472-7358
+            </span>
+        </div>
+    </nav>
 
-  <!-- HERO SECTION -->
-  <div class="hero-bg">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <div class="hero-title">PHILIPE</div>
-      <div class="hero-title" style="margin-top: 0;">FERNANDES</div>
-      <div class="hero-subtitle mb-4">Designer / Video Maker / UI / Músico</div>
-      <div class="hero-buttons">
-        <a href="#about" class="btn btn-outline-light">Sobre</a>
-        <a href="#portfolio" class="btn btn-light text-dark">Portfolio</a>
-      </div>
-      <div class="social-icons">
-        <a href="https://wa.me/seunumerowhatsapp" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://instagram.com/seuusuario" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://linkedin.com/in/seulinkedin" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    <!-- HERO SECTION -->
+    <div class="hero-bg">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <div class="hero-title" style="margin-bottom:0.01em; margin-top:0;">PHILIPE</div>
+            <div class="hero-title" style="margin-top:0;">FERNANDES</div>
+            <div class="hero-subtitle mb-4">Designer / Video Maker / UI / Músico</div>
+            <div class="hero-buttons mb-4">
+                <a href="#about" class="btn btn-outline-light">Sobre</a>
+                <a href="#portfolio" class="btn btn-light text-dark">Portfolio</a>
+            </div>
+        </div>
+        <div class="social-icons">
+            <a href="https://wa.me/5561984727358" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/lipe_fernandes91/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com/in/seulinkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <section id="about" class="py-5" style="background: #181c20; color: #fff;">
+        <div class="container">
+          <div class="row align-items-center" style="min-height: 350px;">
+            <!-- Coluna do texto à esquerda com linha azul -->
+            <div class="col-md-7 position-relative">
+              <!-- Linha azul vertical -->
+              <div style="position: absolute; left: -20px; top: 0; width: 4px; height: 100%; background: #00bcd4;"></div>
+            
+              <h2 class="fw-bold mb-4" style="font-size: 2.8rem; letter-spacing: 2px; color: #00bcd4;">Sobre</h2>
+              <p style="font-size: 1.15rem; color: #ccc; max-width: 600px;">
+                Olá! Sou Philipe Fernandes, tenho 34 anos, sou casado há 18 anos com uma mulher incrível e pai de um menino maravilhoso de 7 anos. Sou apaixonado por contar histórias através de filmagens, edições criativas e artes digitais. Transformo ideias em vídeos envolventes e criações visuais, sempre buscando transmitir emoção e autenticidade em cada projeto.
+Atualmente, estou expandindo meus horizontes e mergulhando no universo do UI Design, porque acredito que a experiência visual é fundamental para conectar pessoas e ideias. Estou sempre em busca de novos conhecimentos e desafios para unir o melhor do audiovisual, do design digital e das artes visuais, criando experiências completas e memoráveis.
+Além disso, sou baterista e já tive a oportunidade de fazer shows pelo Brasil inteiro, levando energia e ritmo para diferentes públicos e palcos.
+              </p>
+            </div>
+            <!-- Coluna da foto à direita -->
+            <div class="col-md-5 text-center">
+              <img src="img/philipe.jpeg" alt="Foto de Philipe" class="img-fluid rounded-circle shadow" style="width: 240px; height: 240px; object-fit: cover; border: 6px solid #00bcd4;">
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <section id="resume" class="py-5" style="background: #181c20; color: #fff;">
+        <div class="container">
+          <h2 class="fw-bold mb-5" style="font-size: 2.5rem; letter-spacing: 2px; color: #00bcd4;">Formação Acadêmica</h2>
+          <div class="row">
+            <div class="col-md-10 offset-md-1">
+
+              <!-- Item de Formação 1 -->
+              <div class="card bg-dark border-0 shadow mb-4">
+                <div class="card-body">
+                  <h5 class="card-title" style="color:#00bcd4;">Análise e desenvolvimento de sistemas</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">UNIProjeção | 2025 - 2027</h6>
+                  <p class="card-text" style="color:#ccc;">Atualmente estou cursando o segundo semestre de Análise e Desenvolvimento de Sistemas. Cada aula tem sido uma nova descoberta e, a cada projeto, percebo o quanto a tecnologia pode transformar ideias em realidade. Estou especialmente empolgado com o universo do desenvolvimento web. 
+                    Inclusive, foi graças à faculdade que me aventurei a criar este site, que está ficando cada vez mais a minha cara! Estou animado para os próximos desafios e para tudo que ainda vou aprender nesse caminho.</p>
+                </div>
+              </div>
+              <h3 class="fw-bold mt-5 mb-4" style="color: #00bcd4;">Certificados</h3>
+      
+              <!-- Certificado 2 da Alura (copie e cole para mais certificados) -->
+
+              <div class="card bg-dark border-0 shadow mb-3">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                  <div>
+                    <h6 class="card-title mb-1" style="color:#00bcd4;">UX: entenda a experiência de usuário</h6>
+                    <p class="card-text mb-0" style="color:#ccc; font-size: 0.9rem;">Data de conclusão:  09 de janeiro de 2024</p>
+                  </div>
+                  <div>
+                    <a href="https://cursos.alura.com.br/certificate/4f4262c1-4b61-4f8e-89d9-3416b8513191?lang=pt_BR" target="_blank" class="btn btn-outline-light btn-sm">
+                      <i class="fas fa-external-link-alt me-1"></i> Ver Certificado
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card bg-dark border-0 shadow mb-3">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                  <div>
+                    <h6 class="card-title mb-1" style="color:#00bcd4;">Figma: prototipagem interativa e animações</h6>
+                    <p class="card-text mb-0" style="color:#ccc; font-size: 0.9rem;">Data de conclusão:   23 de abril de 2024</p>
+                  </div>
+                  <div>
+                    <a href="https://cursos.alura.com.br/certificate/d2515b53-3ddf-4864-8bed-4e6935440b49?lang=pt_BR" target="_blank" class="btn btn-outline-light btn-sm">
+                      <i class="fas fa-external-link-alt me-1"></i> Ver Certificado
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card bg-dark border-0 shadow mb-3">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                  <div>
+                    <h6 class="card-title mb-1" style="color:#00bcd4;">Figma: componentes, auto layout e máscaras</h6>
+                    <p class="card-text mb-0" style="color:#ccc; font-size: 0.9rem;">Data de conclusão:    05 de abril de 2024</p>
+                  </div>
+                  <div>
+                    <a href="https://cursos.alura.com.br/certificate/342a5e48-6700-4975-afe8-259958df6680?lang=pt_BR" target="_blank" class="btn btn-outline-light btn-sm">
+                      <i class="fas fa-external-link-alt me-1"></i> Ver Certificado
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card bg-dark border-0 shadow mb-3">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                  <div>
+                    <h6 class="card-title mb-1" style="color:#00bcd4;">UI Design: mergulhando nas interfaces digitais</h6>
+                    <p class="card-text mb-0" style="color:#ccc; font-size: 0.9rem;">Data de conclusão:    05 de fevereiro de 2024</p>
+                  </div>
+                  <div>
+                    <a href="https://cursos.alura.com.br/certificate/e2b82fcf-b7a7-4d83-9877-8f6060c017e6?lang=pt_BR" target="_blank" class="btn btn-outline-light btn-sm">
+                      <i class="fas fa-external-link-alt me-1"></i> Ver Certificado
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card bg-dark border-0 shadow mb-3">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                  <div>
+                    <h6 class="card-title mb-1" style="color:#00bcd4;">Figma: design visual de um site mobile</h6>
+                    <p class="card-text mb-0" style="color:#ccc; font-size: 0.9rem;">Data de conclusão:    29 de fevereiro de 2024</p>
+                  </div>
+                  <div>
+                    <a href="https://cursos.alura.com.br/certificate/5cdbf3c5-08b9-424b-854d-5809516e94a5?lang=pt_BR" target="_blank" class="btn btn-outline-light btn-sm">
+                      <i class="fas fa-external-link-alt me-1"></i> Ver Certificado
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card bg-dark border-0 shadow mb-3">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                  <div>
+                    <h6 class="card-title mb-1" style="color:#00bcd4;">Figma: conhecendo a ferramenta</h6>
+                    <p class="card-text mb-0" style="color:#ccc; font-size: 0.9rem;">Data de conclusão:    07 de janeiro de 2024</p>
+                  </div>
+                  <div>
+                    <a href="https://cursos.alura.com.br/certificate/bb76e840-55ac-4837-add2-4305b76999d2?lang=pt_BR" target="_blank" class="btn btn-outline-light btn-sm">
+                      <i class="fas fa-external-link-alt me-1"></i> Ver Certificado
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card bg-dark border-0 shadow mb-3">
+                <div class="card-body d-flex justify-content-between align-items-center">
+                  <div>
+                    <h6 class="card-title mb-1" style="color:#00bcd4;">Design Thinking: viabilizando soluções</h6>
+                    <p class="card-text mb-0" style="color:#ccc; font-size: 0.9rem;">Data de conclusão:    18 de março de 2024</p>
+                  </div>
+                  <div>
+                    <a href="https://cursos.alura.com.br/certificate/d445e397-03cb-488e-93d1-3e28ea623323?lang=pt_BR" target="_blank" class="btn btn-outline-light btn-sm">
+                      <i class="fas fa-external-link-alt me-1"></i> Ver Certificado
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+</section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="hobbies" class="py-5" style="background: #181c20; color: #fff;">
+        <div class="container">
+          <h2 class="fw-bold mb-5" style="font-size: 2.5rem; letter-spacing: 2px; color: #00bcd4;">Hobbies & Interesses</h2>
+          <div class="row g-4 justify-content-center">
+            <!-- Hobby: Música/Bateria -->
+            <div class="col-md-6 col-lg-4">
+              <div class="card bg-dark border-0 shadow h-100 text-center">
+                <div class="card-body d-flex flex-column align-items-center">
+                  <h5 class="card-title" style="color:#00bcd4;">Música e Bateria</h5>
+                  <p class="card-text" style="color:#ccc;">
+                    Apaixonado por música, sou baterista e já toquei em shows por todo o Brasil, levando energia e ritmo para diferentes públicos.
+                  </p>
+                  <div class="mt-3 w-100 d-flex flex-column align-items-center">
+                    <img src="img/batera01.jpeg" alt="Bateria 1" class="img-fluid rounded mb-3" style="max-width: 220px; width: 100%; height: 220px; object-fit: cover;">
+                    <img src="img/batera 02 (1).jpeg" alt="Bateria 2" class="img-fluid rounded" style="max-width: 220px; width: 100%; height: 220px; object-fit: cover;">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Hobby: Família -->
+            <div class="col-md-6 col-lg-4">
+              <div class="card bg-dark border-0 shadow h-100 text-center">
+                <div class="card-body d-flex flex-column align-items-center">
+                  <h5 class="card-title" style="color:#00bcd4;">Família</h5>
+                  <p class="card-text" style="color:#ccc;">
+                    Sou casado com uma mulher incrível e pai de um menino maravilhoso. Minha família é minha base, inspiração e alegria diária.
+                  </p>
+                  <div class="mt-3 w-100 d-flex flex-column align-items-center">
+                    <img src="img/familia 02.jpeg" alt="Família 1" class="img-fluid rounded mb-3" style="max-width: 220px; width: 100%; height: 220px; object-fit: cover;">
+                    <img src="img/familia 01.jpeg" alt="Família 2" class="img-fluid rounded" style="max-width: 220px; width: 100%; height: 220px; object-fit: cover;">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio" class="py-5" style="background: #181c20; color: #fff;">
+        <div class="container">
+          <h2 class="fw-bold mb-5" style="font-size: 2.5rem; letter-spacing: 2px; color: #00bcd4;">Portfolio</h2>
+    
+         <!-- Designer -->
+<h3 class="fw-bold mt-4 mb-3" style="color: #00bcd4;">Designer</h3>
+<div class="row g-4 mb-4">
+  <!-- Arte 1 -->
+  <div class="col-md-6 col-lg-4">
+    <div class="card bg-dark border-0 shadow h-100">
+      <div class="card-body">
+        <h5 class="card-title" style="color:#00bcd4;">Arte Digital Carro de Drift Mark II</h5>
+        <p class="card-text" style="color:#ccc;">
+          Design desenvolvido para carro de drift, com layout exclusivo pensado para destacar a identidade visual e transmitir agressividade e velocidade nas pistas. 
+          Projeto criado com foco em impacto visual, cores marcantes e linhas que valorizam o formato do carro, reforçando a presença da equipe durante os eventos.
+        </p>
+        <img src="img/layoutdrift.jpeg" class="card-img-top mb-3" alt="Arte Digital 1" style="border-radius: 8px;">
+        <img src="img/design 01.jpeg" class="card-img-top mb-3" alt="Arte Digital 1" style="border-radius: 8px;">
+        <img src="img/design 02.jpeg" class="card-img-top" alt="Arte Digital 1" style="border-radius: 8px;">
       </div>
     </div>
   </div>
 
-  <!-- SECTIONS (Sobre, Formação, Hobbies, Portfolio) -->
-  <!-- ... seu conteúdo continua igual ... -->
+ 
+  <!-- Arte 2 -->
+<div class="col-md-6 col-lg-4">
+  <div class="card bg-dark border-0 shadow h-100">
+    <div class="card-body">
+      <h5 class="card-title" style="color:#00bcd4;">Arte Digital Toyota Racing</h5>
+      <p class="card-text" style="color:#ccc;">
+        Projeto de design para o Toyota de corrida do lutador de UFC Vicente Luque, criado para trazer um visual competitivo e impactante. 
+        O layout foi desenvolvido para combinar performance e estética, com cores e formas que realçam a presença do carro na pista e destacam ainda mais a identidade do atleta e da equipe.
+      </p>
+      <img src="img/toyota.jpeg" class="card-img-top mb-3" alt="Arte Digital 2" style="border-radius: 8px;" />
+      
+      <!-- Container responsivo para o vídeo -->
+      <div class="ratio ratio-16x9" style="border-radius: 8px; overflow: hidden;">
+        <iframe 
+          src="https://www.youtube.com/embed/RSdENe6A7a0?si=s71iblRerSjvYPMT" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+</div>
+    
+          <!-- Video Maker -->
+          <h3 class="fw-bold mt-4 mb-3" style="color: #00bcd4;">Video Maker</h3>
+          <div class="row g-4 mb-4">
+            <div class="col-md-6 col-lg-4">
+              <div class="card bg-dark border-0 shadow h-100">
+                <div class="ratio ratio-16x9">
+                  <div class="ratio ratio-16x9">
+                    <iframe 
+                      src="https://www.youtube.com/embed/YYQ6PYeYwtg" 
+                      title="Ultima edição"
+                      allowfullscreen
+                      style="border-radius: 8px 8px 0 0; border: none;">
+                    </iframe>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title" style="color:#00bcd4;">Minha última edição</h5>
+                  <p class="card-text" style="color:#ccc;">Último vídeo editado mostrando o recebimento da nova máquina CNC na NGD, com imagens do descarregamento e entrada da máquina na empresa. Gravação realizada com Galaxy M35 e edição feita internamente.</p>
+                </div>
+              </div>
+            </div>
+            <!-- Adicione mais cards de vídeo aqui -->
+          </div>
+    
+          <!-- UI -->
+          <section id="ui" class="py-5" style="background: #181c20; color: #fff;">
+            <div class="container">
+              <h2 class="fw-bold mb-5" style="font-size: 2.5rem; letter-spacing: 2px; color: #00bcd4;">UI Design</h2>
+              <div class="row g-4 mb-4 justify-content-center">
+                <!-- Projeto UI 1 (Card com imagem e texto) -->
+                <div class="col-md-6 col-lg-4">
+                  <div class="card bg-dark border-0 shadow h-100">
+                    <div class="card-body">
+                      <h5 class="card-title" style="color:#00bcd4;">Projeto UI - App Ticket</h5>
+                      <p class="card-text" style="color:#ccc;">
+                       Wireframe de um aplicativo de venda de ingressos, focado em usabilidade e experiência do usuário.
+                      </p>
+                      <!-- Imagem principal do projeto UI -->
+                      <img src="img/figma01.jpg" class="card-img-top mb-3" alt="App Ticket UI" style="border-radius: 8px;">
+                      <!-- Segunda imagem ou detalhe do projeto UI -->
+                    
+                      <div class="mt-3 text-center">
+                        <a href="https://www.figma.com/design/2C1aZjv354SFRI3snZO7KN/App-Ticket?node-id=0-1&m=dev&t=9Rn24gyrxIRnOtJa-1" target="_blank" class="btn btn-outline-light btn-sm">
+                          Ver no Figma
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        
+                <!-- Projeto UI 2 (Outro card com imagem e texto) -->
+                <div class="col-md-6 col-lg-4">
+                  <div class="card bg-dark border-0 shadow h-100">
+                    <div class="card-body">
+                      <h5 class="card-title" style="color:#00bcd4;">Projeto UI - Buyticket</h5>
+                      <p class="card-text" style="color:#ccc;">
+                        Interface de aplicativo de compra de ingressos, com foco em design responsivo.
+                      </p>
+                      <img src="img/figma02.jpg" class="card-img-top mb-3" alt="Website UI" style="border-radius: 8px;">
+                    
+                      <div class="mt-3 text-center">
+                        <a href="https://www.figma.com/design/GlwppE4xQeoKNBNGNQY58o/Untitled?node-id=0-1&m=dev&t=7CbnZ5YdlVl3gbQz-1" target="_blank" class="btn btn-outline-light btn-sm">
+                          Ver no Figma
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Adicione mais cards de UI aqui, copiando o bloco acima -->
+              </div>
+            </div>
+          </section>
+    
+    
+          
+            <!-- Video Maker -->
+<h3 class="fw-bold mt-4 mb-3" style="color: #00bcd4;">Músico</h3>
+<div class="row g-4 mb-4">
+  <!-- Vídeo 1 -->
+  <div class="col-md-6 col-lg-4">
+    <div class="card bg-dark border-0 shadow h-100">
+      <div class="ratio ratio-16x9">
+        <iframe 
+          src="https://www.youtube.com/embed/BzoJu7LL3lQ?si=Y8YJ-wfmh7gtxZQ3" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title" style="color:#00bcd4;">Reggae de quintal</h5>
+        <p class="card-text" style="color:#ccc;">
+          Banda de reggae que traz uma fusão única ao reinterpretar clássicos da música brasileira em versões autênticas de reggae, criando uma experiência sonora envolvente e vibrante.
+        </p>
+      </div>
+    </div>
+  </div>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Vídeo 2 -->
+  <div class="col-md-6 col-lg-4">
+    <div class="card bg-dark border-0 shadow h-100">
+      <div class="ratio ratio-16x9">
+        <iframe 
+          src="https://www.youtube.com/embed/qnOplIHGyeQ?si=UmIHEdCUOCTg1ul_" 
+          title="Outro vídeo musical" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title" style="color:#00bcd4;">O Dobro</h5>
+        <p class="card-text" style="color:#ccc;">
+          Banda cover renomada do Rappa, formada por músicos talentosos de Sobradinho, DF, que entregam performances energéticas e fiéis ao estilo original, conquistando fãs com sua paixão e técnica apurada.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vídeo 3 -->
+  <div class="col-md-6 col-lg-4">
+    <div class="card bg-dark border-0 shadow h-100">
+      <div class="ratio ratio-16x9">
+        <iframe 
+          src="https://www.youtube.com/embed/FBqF8XB9OrE?list=RDFBqF8XB9OrE&start_radio=1" 
+          title="Terceiro vídeo musical" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
+        </iframe>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title" style="color:#00bcd4;">Casacasta</h5>
+        <p class="card-text" style="color:#ccc;">
+          Banda autoral de Brasília que se destaca pela criatividade e originalidade, combinando influências diversas para criar um som único e contemporâneo, refletindo a riqueza cultural da cena musical local.
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="contato" class="py-5" style="background: #181c20; color: #fff;">
+  <div class="container">
+    <h2 class="fw-bold mb-5 text-center" style="font-size: 2.5rem; letter-spacing: 2px; color: #00bcd4;">Contato</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        <form>
+          <div class="mb-3">
+            <label for="nome" class="form-label" style="color:#00bcd4;">Nome</label>
+            <input type="text" class="form-control" id="nome" placeholder="Seu nome" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label" style="color:#00bcd4;">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="seu@email.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="mensagem" class="form-label" style="color:#00bcd4;">Mensagem</label>
+            <textarea class="form-control" id="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-outline-light w-100">Enviar</button>
+        </form>
+        <div class="mt-4 text-center" style="color:#ccc;">
+          <p><i class="fas fa-phone-alt me-2"></i> (61) 98472-7358</p>
+          <p><i class="fas fa-envelope me-2"></i> philipe.fernandes0101@gmail.com</p>
+          <p>
+            <a href="https://wa.me/5561984727358" target="_blank" style="color:#00bcd4; text-decoration:none;">
+              <i class="fab fa-whatsapp me-1"></i> WhatsApp
+            </a> | 
+            <a href="https://www.instagram.com/lipe_fernandes91/" target="_blank" style="color:#00bcd4; text-decoration:none;">
+              <i class="fab fa-instagram me-1"></i> Instagram
+            </a> | 
+            <a href="https://www.linkedin.com/in/philipe-fernandes-2156b8164?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" style="color:#00bcd4; text-decoration:none;">
+              <i class="fab fa-linkedin-in me-1"></i> LinkedIn
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    
 </body>
 </html>
