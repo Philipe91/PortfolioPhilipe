@@ -1,81 +1,126 @@
-<style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            font-family: 'Poppins', Arial, sans-serif;
-            background: #181c20;
-        }
-        .hero-bg {
-            background: url('img/lipe.jpg') top center/cover no-repeat;
-            background-size:100% auto;
+.hero-bg {
+    position: relative;
+    background: url('img/lipe.jpg') center center no-repeat;
+    background-size: cover;
     min-height: 100vh;
-            min-height: 100vh;
-            color: #fff;
-            position: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-          
-        }
-        .overlay {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(20, 24, 28, 0.7);
-            z-index: 1;
-        }
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            padding-top: 120px;
-            padding-left: 60px;
-        }
-        .hero-title {
-            font-family: 'Montserrat', Arial, sans-serif;
-            font-size: 3rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-        }
-        .hero-subtitle {
-            font-size: 1.2rem;
-            letter-spacing: 2px;
-            color: #b0b0b0;
-            margin-bottom: 30px;
-        }
-        .hero-buttons .btn {
-            margin-right: 15px;
-            border-radius: 25px;
-            padding: 8px 32px;
-            font-weight: 600;
-        }
-        .hero-buttons .btn-outline-light {
-            border: 2px solid #fff;
-        }
-        .social-icons {
-            position: absolute;
-            left: 60px;
-            bottom: 40px;
-            z-index: 2;
-        }
-        .social-icons a {
-            color: #fff;
-            margin-right: 18px;
-            font-size: 1.3rem;
-            transition: color 0.2s;
-        }
-        .social-icons a:hover {
-            color: #00bcd4;
-        }
-        @media (max-width: 768px) {
-            .hero-content, .social-icons {
-                padding-left: 20px;
-                left: 20px;
-            }
-            .hero-title {
-                font-size: 2rem;
-            }
-
-            html {
-  scroll-behavior: smooth;
-}
-        }
-    </style>
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 60px;
+    padding-top: 120px;
+    padding-right: 20px; /* para evitar que o conteúdo encoste na borda direita */
+    box-sizing: border-box;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(20, 24, 28, 0.7);
+    z-index: 1;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hero-title {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 0.01em;
+    margin-top: 0;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    color: #b0b0b0;
+    margin-bottom: 30px;
+  }
+  
+  .hero-buttons .btn {
+    margin-right: 15px;
+    border-radius: 25px;
+    padding: 8px 32px;
+    font-weight: 600;
+  }
+  
+  .hero-buttons .btn-outline-light {
+    border: 2px solid #fff;
+  }
+  
+  .social-icons {
+    position: absolute;
+    left: 60px;
+    bottom: 40px;
+    z-index: 2;
+  }
+  
+  .social-icons a {
+    color: #fff;
+    margin-right: 18px;
+    font-size: 1.3rem;
+    transition: color 0.2s;
+  }
+  
+  .social-icons a:hover {
+    color: #00bcd4;
+  }
+  
+  /* Responsividade mantendo layout e posições */
+  
+  @media (max-width: 992px) {
+    .hero-bg {
+      padding-left: 40px;
+      padding-top: 100px;
+    }
+    .social-icons {
+      left: 40px;
+      bottom: 30px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero-bg {
+      padding-left: 30px;
+      padding-top: 80px;
+    }
+    .hero-title {
+      font-size: 2.5rem;
+    }
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+    .hero-buttons .btn {
+      padding: 6px 24px;
+      font-size: 0.9rem;
+    }
+    .social-icons {
+      left: 30px;
+      bottom: 25px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-bg {
+      padding-left: 20px;
+      padding-top: 60px;
+    }
+    .hero-title {
+      font-size: 2rem;
+    }
+    .hero-subtitle {
+      font-size: 0.9rem;
+    }
+    .hero-buttons .btn {
+      padding: 5px 20px;
+      font-size: 0.85rem;
+    }
+    .social-icons {
+      left: 20px;
+      bottom: 20px;
+    }
+  }
