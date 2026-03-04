@@ -13,7 +13,8 @@
 }
 
 :root {
-  --bg-dark: #08090d;
+  --bg-dark: #08090e;
+  /* CMYK 84 83 73 80 = RGB 8 9 14 */
   --bg-card: #0e1117;
   --bg-section: #0b0d14;
   --accent: #00d4ff;
@@ -254,24 +255,33 @@ a {
   background-repeat: no-repeat;
 }
 
-/* Dark gradient overlay — covers left side for text readability */
+/* Dark gradient overlay — fades all 4 edges of the photo to eliminate the visible rectangle box */
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
   z-index: 1;
   background:
+    /* Left: opaque dark → transparent (text area) */
     linear-gradient(to right,
-      rgba(8, 9, 13, 0.97) 0%,
-      rgba(8, 9, 13, 0.85) 30%,
-      rgba(8, 9, 13, 0.4) 55%,
-      rgba(8, 9, 13, 0.0) 75%),
+      rgba(8, 9, 14, 1.0) 0%,
+      rgba(8, 9, 14, 0.92) 28%,
+      rgba(8, 9, 14, 0.45) 55%,
+      rgba(8, 9, 14, 0.0) 68%),
+    /* Right: fade out right edge of photo box */
+    linear-gradient(to left,
+      rgba(8, 9, 14, 1.0) 0%,
+      rgba(8, 9, 14, 0.6) 8%,
+      rgba(8, 9, 14, 0.0) 20%),
+    /* Bottom: fade to dark */
     linear-gradient(to top,
-      rgba(8, 9, 13, 0.9) 0%,
-      transparent 25%),
+      rgba(8, 9, 14, 1.0) 0%,
+      rgba(8, 9, 14, 0.5) 15%,
+      transparent 30%),
+    /* Top: subtle dark */
     linear-gradient(to bottom,
-      rgba(8, 9, 13, 0.6) 0%,
-      transparent 20%);
+      rgba(8, 9, 14, 0.7) 0%,
+      transparent 18%);
   pointer-events: none;
 }
 
