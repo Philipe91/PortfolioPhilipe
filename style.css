@@ -1345,3 +1345,98 @@ a {
     grid-template-columns: 1fr;
   }
 }
+/* ==============================================================
+   ADIÇÕES — pitch do hero e cards de sistemas
+============================================================== */
+
+.hero-pitch {
+  max-width: 34rem;
+  margin: 1.2rem 0 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+/* Cards em destaque (projetos principais de sistemas) */
+.card-featured {
+  border-color: rgba(0, 212, 255, 0.28);
+  background:
+    linear-gradient(180deg, rgba(0, 212, 255, 0.05), transparent 45%),
+    var(--bg-card);
+}
+
+.card-featured:hover {
+  border-color: rgba(0, 212, 255, 0.5);
+}
+
+/* Lista de funcionalidades dentro do card */
+.card-list {
+  margin: 0.9rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.card-list li {
+  position: relative;
+  padding-left: 1.1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.card-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* Chips de tecnologia */
+.card-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 1.1rem;
+}
+
+.card-stack span {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  color: var(--text-muted);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* Selo de status */
+.card-status {
+  display: inline-block;
+  margin-top: 0.9rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 0.28rem 0.7rem;
+  border-radius: 999px;
+  color: var(--accent3);
+  border: 1px solid rgba(0, 245, 160, 0.28);
+  background: rgba(0, 245, 160, 0.07);
+}
+
+@media (max-width: 640px) {
+  .hero-pitch {
+    font-size: 0.92rem;
+  }
+
+  .card-list li {
+    font-size: 0.86rem;
+  }
+}
