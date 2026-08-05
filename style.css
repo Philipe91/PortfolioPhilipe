@@ -1440,3 +1440,18 @@ a {
     font-size: 0.86rem;
   }
 }
+
+/* Nota complementar e selo de lançamento */
+.card-note {
+  margin-top: 0.8rem;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+  opacity: 0.85;
+}
+
+.card-status.status-launch {
+  color: #ffcf6b;
+  border-color: rgba(255, 207, 107, 0.32);
+  background: rgba(255, 207, 107, 0.09);
+}
